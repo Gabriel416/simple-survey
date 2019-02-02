@@ -1,0 +1,81 @@
+{
+  "title": {
+    "value": "Form Title",
+    "hidden": false
+  },
+  "fields": [
+    {
+      "type": "text",
+      "required": true,
+      "label": { "value": "label", "hidden": false },
+      "placeholder": { "value": "placeholder", "hidden": false }
+    },
+    {
+      "type": "radio",
+      "required": true,
+      "label": { "value": "label", "hidden": false },
+      "placeholder": { "value": "placeholder", "hidden": false },
+      "choices": [
+        {
+          "checked": true,
+          "label": { "value": "value 1", "hidden": false }
+        },
+        {
+          "checked": false,
+          "label": { "value": "value 2", "hidden": false }
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "required": true,
+      "label": { "value": "label", "hidden": false },
+      "min": 0,
+      "max": 100,
+      "value": 0
+    },
+    {
+      "type": "checkbox",
+      "required": true,
+      "label": { "value": "label", "hidden": false },
+      "placeholder": { "value": "placeholder", "hidden": false },
+      "choices": [
+        {
+          "checked": true,
+          "label": { "value": "value 1", "hidden": false }
+        },
+        {
+          "checked": false,
+          "label": { "value": "value 2", "hidden": false }
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "required": true,
+      "label": { "value": "label", "hidden": false },
+      "choices": [
+        {
+          "selected": true,
+          "value": "select option 1"
+        },
+        {
+          "selected": false,
+          "value": "select option 2"
+        }
+      ]
+    }
+  ],
+  "submitButton": {
+    "background": "#ffffff",
+    "color": "#000000",
+    "hidden": false,
+    "action": "handleSubmit"
+  },
+  "cancelButton": {
+    "background": "#000000",
+    "color": "#ffffff",
+    "hidden": false,
+    "action": "handleCancel"
+  }
+}
