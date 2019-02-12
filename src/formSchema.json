@@ -27,14 +27,6 @@
       ]
     },
     {
-      "type": "range",
-      "required": true,
-      "label": { "value": "label", "hidden": false },
-      "min": 0,
-      "max": 100,
-      "value": 0
-    },
-    {
       "type": "checkbox",
       "required": true,
       "label": { "value": "label", "hidden": false },
@@ -51,17 +43,31 @@
       ]
     },
     {
+      "type": "range",
+      "required": true,
+      "label": { "value": "label", "hidden": false },
+      "placeholder": { "value": "placeholder", "hidden": false },
+      "min": 0,
+      "max": 100,
+      "value": 0
+    },
+    {
       "type": "select",
       "required": true,
       "label": { "value": "label", "hidden": false },
+      "placeholder": { "value": "placeholder", "hidden": false },
       "choices": [
         {
-          "selected": true,
-          "value": "select option 1"
+          "selected": false,
+          "value": ""
         },
         {
           "selected": false,
-          "value": "select option 2"
+          "value": "option 1"
+        },
+        {
+          "selected": false,
+          "value": "option 2"
         }
       ]
     }

@@ -1,14 +1,43 @@
 import React from "react";
 import { Formik, Form, Field, FieldArray } from "formik";
 
+import TextInput from "./TextInput";
+import SelectInput from "./SelectInput";
+import CheckedInput from "./CheckedInput";
+import RangeInput from "./RangeInput";
+
 const FormPreview = ({ initalValues, onSubmit }) => {
+  const selectedFormField = (field, index) => {
+    switch (field.type) {
+      case "text":
+        return TextInput;
+      case "email":
+        return TextInput;
+      case "password":
+        return TextInput;
+      case "select":
+        return SelectInput;
+      case "radio":
+        return CheckedInput;
+      case "checkbox":
+        return CheckedInput;
+      case "range":
+        return RangeInput;
+      default:
+        return TextInput;
+    }
+  };
+
   const renderFormFields = (values, arrayHelpers) => {
-    console.log(values, "values");
-    console.log(arrayHelpers, "array helpers");
+    // console.log(values, "values");
+    // console.log(arrayHelpers, "array helpers");
     return values.fields.map((field, index) => {
       return (
         <div key={index}>
-          <Field name={`fields[${index}]`} component={field.type} />
+          <Field
+            name={`fields[${index}]`}
+            component={selectedFormField(field, index)}
+          />
         </div>
       );
     });
