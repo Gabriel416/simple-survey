@@ -1,54 +1,71 @@
 {
   "title": {
-    "value": "Form Title",
-    "hidden": false
+    "value": "Untitled",
+    "hidden": false,
+    "align": "left"
   },
   "fields": [
     {
       "type": "text",
       "required": true,
-      "label": { "value": "label", "hidden": false },
+      "label": {
+        "value": "Text Label",
+        "hidden": false,
+        "align": "left"
+      },
       "placeholder": { "value": "placeholder", "hidden": false },
       "inputValue": null
     },
     {
       "type": "radio",
       "required": true,
-      "label": { "value": "label", "hidden": false },
+      "label": {
+        "value": "Radio Label",
+        "hidden": false,
+        "align": "left"
+      },
       "placeholder": { "value": "placeholder", "hidden": false },
       "inputValue": null,
       "choices": [
         {
           "checked": true,
-          "label": { "value": "value 1", "hidden": false }
+          "label": { "value": "value 1", "hidden": false, "inline": true }
         },
         {
           "checked": false,
-          "label": { "value": "value 2", "hidden": false }
+          "label": { "value": "value 2", "hidden": false, "inline": true }
         }
       ]
     },
     {
       "type": "checkbox",
       "required": true,
-      "label": { "value": "label", "hidden": false },
+      "label": {
+        "value": "Checkbox Label",
+        "hidden": false,
+        "align": "left"
+      },
       "placeholder": { "value": "placeholder", "hidden": false },
       "inputValue": null,
       "choices": [
         {
           "checked": false,
-          "label": { "value": "value 1", "hidden": false }
+          "label": { "value": "value 1", "hidden": false, "inline": true }
         },
         {
           "checked": false,
-          "label": { "value": "value 2", "hidden": false }
+          "label": { "value": "value 2", "hidden": false, "inline": true }
         }
       ]
     },
     {
       "type": "range",
       "required": true,
-      "label": { "value": "label", "hidden": false },
+      "label": {
+        "value": "Range Label",
+        "hidden": false,
+        "align": "left"
+      },
       "placeholder": { "value": "placeholder", "hidden": false },
       "inputValue": 0,
       "min": 0,
@@ -57,7 +74,11 @@
     {
       "type": "select",
       "required": true,
-      "label": { "value": "label", "hidden": false },
+      "label": {
+        "value": "Select Label",
+        "hidden": false,
+        "align": "left"
+      },
       "placeholder": { "value": "placeholder", "hidden": false },
       "inputValue": null,
       "choices": [

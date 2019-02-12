@@ -29,11 +29,16 @@ const FormPreview = ({ initalValues, onSubmit }) => {
   };
 
   const renderFormFields = (values, arrayHelpers) => {
-    // console.log(values, "values");
-    // console.log(arrayHelpers, "array helpers");
     return values.fields.map((field, index) => {
       return (
-        <div key={index}>
+        <div
+          key={index}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
           <Field
             name={`fields[${index}]`}
             component={selectedFormField(field, index)}

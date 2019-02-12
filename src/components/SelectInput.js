@@ -1,5 +1,7 @@
 import React from "react";
 
+import Label from "./shared/Label";
+
 const SelectInput = ({ field, form }) => {
   const {
     value: { label, placeholder, required, choices }
@@ -8,7 +10,7 @@ const SelectInput = ({ field, form }) => {
 
   return (
     <div>
-      <label className={label.hidden ? "d-none" : ""}>{label.value}</label>
+      <Label label={label} />
       <select
         required={required}
         onChange={e =>

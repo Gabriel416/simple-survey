@@ -1,5 +1,7 @@
 import React from "react";
 
+import Label from "./shared/Label";
+
 const RangeInput = ({ field, form }) => {
   const {
     value: { label, placeholder, type, min, max, inputValue }
@@ -8,7 +10,7 @@ const RangeInput = ({ field, form }) => {
 
   return (
     <div>
-      <label className={label.hidden ? "d-none" : ""}>{label.value}</label>
+      <Label label={label} />
       <input
         type={type}
         placeholder={placeholder.value}

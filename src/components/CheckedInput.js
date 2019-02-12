@@ -1,6 +1,8 @@
 import React from "react";
 import uniqueIdentifier from "../utils/uniqueIdentifier";
 
+import Label from "./shared/Label";
+
 const CheckedInput = ({ field, form }) => {
   const {
     value: { label, required, type, choices }
@@ -46,7 +48,12 @@ const CheckedInput = ({ field, form }) => {
             onChange={e => handleChange(e, choice)}
             checked={choice.checked}
           />
-          <label htmlFor={fieldId}>{choiceValue}</label>
+          <Label
+            labelAttributes={{
+              htmlFor: fieldId
+            }}
+            label={choice.label}
+          />
         </div>
       );
     });
@@ -54,7 +61,7 @@ const CheckedInput = ({ field, form }) => {
 
   return (
     <div>
-      <label className={label.hidden ? "d-none" : ""}>{label.value}</label>
+      <Label label={label} />
       {renderInputFields(choices)}
     </div>
   );
