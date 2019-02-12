@@ -2,7 +2,7 @@ import React from "react";
 
 const RangeInput = ({ field, form }) => {
   const {
-    value: { label, placeholder, type, min, max, value }
+    value: { label, placeholder, type, min, max, inputValue }
   } = field;
   const { setFieldValue } = form;
 
@@ -17,12 +17,12 @@ const RangeInput = ({ field, form }) => {
         onChange={e =>
           setFieldValue(field.name, {
             ...field.value,
-            value: e.target.value
+            inputValue: e.target.value
           })
         }
-        value={value}
+        value={inputValue}
       />
-      <p>{value}</p>
+      <p>{inputValue}</p>
     </div>
   );
 };
