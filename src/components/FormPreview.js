@@ -31,14 +31,7 @@ const FormPreview = ({ initalValues, onSubmit }) => {
   const renderFormFields = (values, arrayHelpers) => {
     return values.fields.map((field, index) => {
       return (
-        <div
-          key={index}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-        >
+        <div key={index} className="field-wrapper">
           <Field
             name={`fields[${index}]`}
             component={selectedFormField(field, index)}
@@ -49,18 +42,22 @@ const FormPreview = ({ initalValues, onSubmit }) => {
   };
 
   return (
-    <div>
+    <div className="form-preview-wrapper">
       <h1>{!initalValues.title.hidden && initalValues.title.value}</h1>
       <Formik
         initialValues={initalValues}
         onSubmit={onSubmit}
         render={({ values }) => (
-          <Form>
-            <FieldArray
-              name="fields"
-              render={arrayHelpers => renderFormFields(values, arrayHelpers)}
-            />
-          </Form>
+          <div className="container">
+            {/* <div className="row"> */}
+            <Form>
+              <FieldArray
+                name="fields"
+                render={arrayHelpers => renderFormFields(values, arrayHelpers)}
+              />
+            </Form>
+            {/* </div> */}
+          </div>
         )}
       />
     </div>

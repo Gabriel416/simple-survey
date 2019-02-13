@@ -4,7 +4,7 @@ import Label from "./shared/Label";
 
 const SelectInput = ({ field, form }) => {
   const {
-    value: { label, placeholder, required, choices }
+    value: { label, required, choices }
   } = field;
   const { setFieldValue } = form;
 

@@ -14,7 +14,8 @@ const Label = ({ labelAttributes, label }) => {
         {...labelAttributes}
         style={{
           display: hidden ? "none" : "block",
-          paddingLeft: inline ? "5px" : "none"
+          paddingLeft: inline ? "5px" : "none",
+          fontSize: inline ? "14px" : "18px"
         }}
       >
         {value}
